@@ -26,7 +26,7 @@ def init():
     return line,
 
 plt.ylim(-1,1)
-ani = animation.FuncAnimation(fig, animate, init_func=init,frames=100, interval=10 ,blit=True)
+ani = animation.FuncAnimation(fig, animate, init_func=init, interval=10 ,blit=True)
 ani.save('cuerda.gif', writer='imagemagick', fps=60)
 
 

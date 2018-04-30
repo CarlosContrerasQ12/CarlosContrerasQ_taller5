@@ -10,10 +10,16 @@ int main(){
 	float V0=100.0;
 	float w=1.3;
 	int tam=L/h;
-	int N=2*tam*tam;
 	
-	float potencial[tam][tam];
-	float potencialpast[tam][tam];
+	float **potencial;
+	float **potencialpast;
+	potencial =new float*[tam];
+	potencialpast=new float*[tam];
+	for(int i=0;i<tam;i++){
+		potencial[i]=new float[tam];
+		potencialpast[i]=new float[tam];
+	}
+	
 	
 	
 	for(int i=0;i<tam;i++){
